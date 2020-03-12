@@ -1,14 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>Hello World</p>
-      </header>
-    </div>
-  );
+import Navigation from "./navigtion";
+import About from "./pages/About";
+import Testimonials from "./pages/Testimonials";
+class App extends Component {
+  render() {
+    return (
+      <>
+        <Navigation />
+        <About />
+        <Testimonials />
+      </>
+    );
+  }
 }
 
 export default App;

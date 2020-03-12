@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Color Theme
+
+- #f8e9a1
+- #f76c6c
+- #a8d0e6
+- #374785
+- #24305E
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -66,4 +74,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
 # portfolio-website
