@@ -8,9 +8,12 @@ import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
 import IconButton from "@material-ui/core/IconButton";
 import clsx from "clsx";
+import Button from "@material-ui/core/Button";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import { Link } from "react-router-dom";
 
 const Navigation = (props) => {
   const { classes } = props;
@@ -41,19 +44,36 @@ const Navigation = (props) => {
     >
       <List>
         <ListItem>
-          <IconButton size="small">
-            <MdFolder className={classes.icon} />
-          </IconButton>
+          <Link to="/home">
+            <Button>
+              <MdFolder className={classes.icon} />
+              <ListItemText primary="Home" />
+            </Button>
+          </Link>
         </ListItem>
         <ListItem>
-          <IconButton size="small">
-            <MdPerson className={classes.icon} />
-          </IconButton>
+          <Link to="/about">
+            <Button>
+              <MdFolder className={classes.icon} />
+              <ListItemText primary="About" />
+            </Button>
+          </Link>
         </ListItem>
         <ListItem>
-          <IconButton size="small">
-            <MdFolder className={classes.icon} />
-          </IconButton>
+          <Link to="/testimonials">
+            <Button>
+              <MdPerson className={classes.icon} />
+              <ListItemText primary="Testimonials" />
+            </Button>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/contact">
+            <Button>
+              <MdFolder className={classes.icon} />
+              <ListItemText primary="Contact" />
+            </Button>
+          </Link>
         </ListItem>
       </List>
     </div>
