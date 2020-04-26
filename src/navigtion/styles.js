@@ -20,5 +20,11 @@ const styles = createStyles({
   fullList: {
     width: "auto",
   },
+  compass: {
+    padding: 10,
+    width: 30,
+    height: 30,
+    background: "#24305E",
+  },
 });
 export default styles;

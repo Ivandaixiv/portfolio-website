@@ -9,7 +9,6 @@ import styles from "./styles";
 import IconButton from "@material-ui/core/IconButton";
 import clsx from "clsx";
 import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 
@@ -64,7 +63,7 @@ const Navigation = (props) => {
     <div>
       <>
         <IconButton size="small" onClick={toggleDrawer("left", true)}>
-          <MdCompass className={classes.icon} />
+          <MdCompass className={classes.compass} color="white" />
         </IconButton>
         <Drawer
           anchor={"left"}
