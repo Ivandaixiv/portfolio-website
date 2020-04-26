@@ -1,16 +1,24 @@
-import { flexbox } from "@material-ui/system";
-
-const styles = {
+import { createStyles } from "@material-ui/styles";
+const styles = createStyles({
   root: {
-    background: "#24305E",
     width: "100%",
     display: "flex",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+  },
+  iconContainer: {
+    background: "#24305E",
+    margin: 10,
   },
   icon: {
     padding: 10,
-    width: 40,
-    height: 40
-  }
-};
+    width: 30,
+    height: 30,
+  },
+  list: {
+    width: 250,
+  },
+  fullList: {
+    width: "auto",
+  },
+});
 export default styles;
