@@ -6,7 +6,6 @@ import MdPerson from "react-ionicons/lib/MdPerson";
 import MdChatbubbles from "react-ionicons/lib/MdChatbubbles";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
-import IconButton from "@material-ui/core/IconButton";
 import clsx from "clsx";
 import Button from "@material-ui/core/Button";
 import Drawer from "@material-ui/core/Drawer";
@@ -82,9 +81,11 @@ const Navigation = (props) => {
   return (
     <div>
       <>
-        <IconButton size="small" onClick={toggleDrawer("left", true)}>
-          <MdCompass className={classes.compass} color="white" />
-        </IconButton>
+        <div className={classes.compassContainer}>
+          <Button size="small" onClick={toggleDrawer("left", true)}>
+            <MdCompass className={classes.compass} color="white" />
+          </Button>
+        </div>
         <Drawer
           anchor={"left"}
           open={state["left"]}
@@ -93,7 +94,7 @@ const Navigation = (props) => {
           {list("left")}
         </Drawer>
         <div className={classes.iconContainer}>
-          <IconButton size="small">
+          <Button size="small">
             <MdChatbubbles
               className={classes.icon}
               shake={Shake}
@@ -103,7 +104,7 @@ const Navigation = (props) => {
                 setShake(false);
               }}
             />
-          </IconButton>
+          </Button>
         </div>
       </>
     </div>

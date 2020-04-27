@@ -6,8 +6,10 @@ const styles = createStyles({
     justifyContent: "space-between",
   },
   iconContainer: {
+    position: "absolute",
     background: "#24305E",
-    margin: 10,
+    top: 10,
+    right: 10,
   },
   icon: {
     padding: 10,
@@ -20,11 +22,16 @@ const styles = createStyles({
   fullList: {
     width: "auto",
   },
+  compassContainer: {
+    position: "absolute",
+    top: 10,
+    left: 10,
+    background: "#24305E",
+  },
   compass: {
     padding: 10,
     width: 30,
     height: 30,
-    background: "#24305E",
   },
 });
 export default styles;
