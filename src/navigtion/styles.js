@@ -18,6 +18,16 @@ const styles = createStyles({
   },
   list: {
     width: 250,
+    background: "#24305E",
+    height: "100%",
+  },
+  button: {
+    minWidth: 200,
+    textAlign: "left",
+  },
+  link: {
+    color: "white",
+    textDecoration: "none",
   },
   fullList: {
     width: "auto",

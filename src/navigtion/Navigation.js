@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import MdCompass from "react-ionicons/lib/MdCompass";
 import MdFolder from "react-ionicons/lib/MdFolder";
 import MdPerson from "react-ionicons/lib/MdPerson";
+import IosHome from "react-ionicons/lib/IosHome";
+import IosMail from "react-ionicons/lib/IosMail";
 import MdChatbubbles from "react-ionicons/lib/MdChatbubbles";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
@@ -44,33 +46,33 @@ const Navigation = (props) => {
       <List>
         <ListItem>
           <Link to="/home">
-            <Button>
-              <MdFolder className={classes.icon} />
-              <ListItemText primary="Home" />
+            <Button className={classes.button}>
+              <IosHome className={classes.icon} color="white" />
+              <ListItemText className={classes.link} primary="Home" />
             </Button>
           </Link>
         </ListItem>
         <ListItem>
           <Link to="/about">
-            <Button>
-              <MdFolder className={classes.icon} />
-              <ListItemText primary="About" />
+            <Button className={classes.button}>
+              <MdFolder className={classes.icon} color="white" />
+              <ListItemText className={classes.link} primary="About" />
             </Button>
           </Link>
         </ListItem>
         <ListItem>
           <Link to="/testimonials">
-            <Button>
-              <MdPerson className={classes.icon} />
-              <ListItemText primary="Testimonials" />
+            <Button className={classes.button}>
+              <MdPerson className={classes.icon} color="white" />
+              <ListItemText className={classes.link} primary="Testimonials" />
             </Button>
           </Link>
         </ListItem>
         <ListItem>
           <Link to="/contact">
-            <Button>
-              <MdFolder className={classes.icon} />
-              <ListItemText primary="Contact" />
+            <Button className={classes.button}>
+              <IosMail className={classes.icon} color="white" />
+              <ListItemText className={classes.link} primary="Contact" />
             </Button>
           </Link>
         </ListItem>
