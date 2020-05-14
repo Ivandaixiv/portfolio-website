@@ -53,18 +53,10 @@ const Navigation = (props) => {
           </Link>
         </ListItem>
         <ListItem>
-          <Link to="/about">
+          <Link to="/projects">
             <Button className={classes.button}>
               <MdFolder className={classes.icon} color="white" />
-              <ListItemText className={classes.link} primary="About" />
-            </Button>
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/testimonials">
-            <Button className={classes.button}>
-              <MdPerson className={classes.icon} color="white" />
-              <ListItemText className={classes.link} primary="Testimonials" />
+              <ListItemText className={classes.link} primary="Projects" />
             </Button>
           </Link>
         </ListItem>

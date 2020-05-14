@@ -10,6 +10,11 @@ const styles = createStyles({
   profile: {
     maxWidth: 300,
     borderRadius: "50%",
+    border: "2px solid black",
+  },
+  testimonialImage: {
+    maxWidth: 75,
+    borderRadius: "50%",
   },
 });
 export default styles;
