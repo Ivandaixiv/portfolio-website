@@ -7,10 +7,18 @@ const styles = createStyles({
     alignSelf: "center",
     justifyContent: "center",
   },
+  introduction: {
+    display: "flex",
+    justifyContent: "space-around",
+    maxWidth: "80vw",
+    alignSelf: "center",
+    width: "70vw",
+  },
   profile: {
+    alignSelf: "center",
+    maxHeight: 300,
     maxWidth: 300,
     borderRadius: "50%",
-    border: "2px solid black",
   },
   testimonialImage: {
     maxWidth: 75,

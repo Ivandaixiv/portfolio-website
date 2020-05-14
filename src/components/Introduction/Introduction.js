@@ -2,17 +2,15 @@ import React from "react";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import { withStyles } from "@material-ui/core/styles";
+import styles from "./styles";
 
-const Introduction = () => {
+const Introduction = ({ classes }) => {
   return (
-    <>
-      <h1>Ivan Dai</h1>
-      <p>
-        Hello My Name is <span>Ivan Dai</span>
-      </p>
-      <p>I am Web/App Developer</p>
+    <div>
+      <h2 className={classes.name}>Ivan Dai</h2>
+      <p className={classes.text}>Hello I am Ivan. I am Web/App Developer</p>
       <List>
-        <h2>My Stack Includes</h2>
         <ListItem>
           <ListItemText>React / React Native</ListItemText>
         </ListItem>
@@ -26,8 +24,8 @@ const Introduction = () => {
           <ListItemText>PostgreSQL</ListItemText>
         </ListItem>
       </List>
-    </>
+    </div>
   );
 };
 
-export default Introduction;
+export default withStyles(styles)(Introduction);

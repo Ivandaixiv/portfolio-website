@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import profile from "../../assets/ivandai.jpg";
 import Lance from "../../assets/lance.jpg";
 import Ringo from "../../assets/ringo.jpg";
-import { withStyles } from "@material-ui/core/styles";
 import Introduction from "../../components/Introduction";
+import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
 import Slider from "infinite-react-carousel";
 
@@ -55,10 +55,12 @@ const Home = (props) => {
     </div>
   ) : (
     <div className={classes.container}>
-      <img src={profile} alt="Ivan Dai" className={classes.profile} />
-      <Introduction />
+      <div className={classes.introduction}>
+        <img src={profile} alt="Ivan Dai" className={classes.profile} />
+        <Introduction />
+      </div>
       <h1>Heres what people had to say</h1>
-      <Slider dots>
+      <Slider dots autoplay autoplaySpeed={5000}>
         <div className={classes.slide}>
           <p className={classes.slideText}>
             The amount of talent Ivan has astounded me. Ivan and I worked on
@@ -87,6 +89,17 @@ const Home = (props) => {
             alt="Ringo Wong"
             className={classes.testimonialImage}
           />
+        </div>
+        <div>
+          <p>
+            More information can be found on my{" "}
+            <a
+              href="https://www.linkedin.com/in/ivan-dai/"
+              className={classes.link}
+            >
+              Linkedin
+            </a>{" "}
+          </p>
         </div>
       </Slider>
     </div>
