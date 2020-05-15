@@ -13,7 +13,6 @@ class HomeContainer extends Component {
         return results.json();
       })
       .then((data) => {
-        console.log("Fetch:", data);
         this.setState({ stats: data });
       });
   }

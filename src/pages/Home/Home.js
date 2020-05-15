@@ -25,10 +25,9 @@ const Home = ({ classes, data }) => {
         <img src={profile} alt="Ivan Dai" className={classes.profile} />
         <Introduction />
       </div>
+      <GitStats data={data} />
       <h1 className={classes.sliderTitle}>Heres what people had to say</h1>
       <Testimonials />
-      {console.log("Transferred:", data)}
-      <GitStats data={data} />
     </div>
   );
 };
