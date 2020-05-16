@@ -76,7 +76,11 @@ const Navigation = (props) => {
       <>
         <div className={classes.compassContainer}>
           <Button size="small" onClick={toggleDrawer("left", true)}>
-            <MdCompass className={classes.compass} color="white" />
+            <MdCompass
+              className={classes.compass}
+              color="white"
+              rotate={true}
+            />
           </Button>
         </div>
         <Drawer

@@ -11,7 +11,12 @@ const GitStats = ({ classes, data, events }) => {
   });
   return (
     <div className={classes.container}>
-      <Github color="white" className={classes.github} />
+      <a
+        href="https://github.com/Ivandaixiv"
+        className={classes.githubContainer}
+      >
+        <Github color="white" className={classes.github} />
+      </a>
       <div className={classes.section}>
         <h2>Public Projects</h2>
         <p> {data.public_repos}</p>

@@ -10,8 +10,10 @@ const styles = createStyles({
     margin: "100px auto",
     boxShadow: "5px 2px 20px #24305E",
   },
-  github: {
+  githubContainer: {
     alignSelf: "center",
+  },
+  github: {
     width: 100,
     height: 100,
   },
