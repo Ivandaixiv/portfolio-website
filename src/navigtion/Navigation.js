@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import MdCompass from "react-ionicons/lib/MdCompass";
 import MdFolder from "react-ionicons/lib/MdFolder";
-import MdPerson from "react-ionicons/lib/MdPerson";
 import IosHome from "react-ionicons/lib/IosHome";
 import IosMail from "react-ionicons/lib/IosMail";
 import MdChatbubbles from "react-ionicons/lib/MdChatbubbles";

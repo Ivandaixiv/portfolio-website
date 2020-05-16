@@ -10,6 +10,7 @@ const styles = createStyles({
     background: "#24305E",
     top: 10,
     right: 10,
+    boxShadow: "2px 2px 10px #24305E",
   },
   icon: {
     padding: 10,
@@ -37,6 +38,7 @@ const styles = createStyles({
     top: 10,
     left: 10,
     background: "#24305E",
+    boxShadow: "2px 2px 10px #24305E",
   },
   compass: {
     padding: 10,
