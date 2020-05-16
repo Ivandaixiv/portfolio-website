@@ -5,7 +5,7 @@ import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
 import Testimonials from "../../components/Testimonials";
 import GitStats from "../../components/GitStats";
-const Home = ({ classes, data }) => {
+const Home = ({ classes, data, events }) => {
   const [device, setDevice] = useState(
     window.innerWidth >= 600 ? "desktop" : "mobile"
   );
@@ -25,7 +25,7 @@ const Home = ({ classes, data }) => {
         <img src={profile} alt="Ivan Dai" className={classes.profile} />
         <Introduction />
       </div>
-      <GitStats data={data} />
+      <GitStats data={data} events={events} />
       <h1 className={classes.sliderTitle}>Heres what people had to say</h1>
       <Testimonials />
     </div>
