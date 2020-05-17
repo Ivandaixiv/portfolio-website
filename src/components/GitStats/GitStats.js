@@ -2,6 +2,7 @@ import React from "react";
 import Github from "react-ionicons/lib/LogoGithub";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
+import Fade from "react-reveal/Fade";
 const GitStats = ({ classes, data, events }) => {
   let recentCommits = 0;
   let recentActivities = events.length;
@@ -15,23 +16,33 @@ const GitStats = ({ classes, data, events }) => {
         href="https://github.com/Ivandaixiv"
         className={classes.githubContainer}
       >
-        <Github color="white" className={classes.github} />
+        <Fade left>
+          <Github color="white" className={classes.github} />
+        </Fade>
       </a>
       <div className={classes.section}>
-        <h2>Public Projects</h2>
-        <p> {data.public_repos}</p>
+        <Fade left>
+          <h2>Public Projects</h2>
+          <p> {data.public_repos}</p>
+        </Fade>
       </div>
       <div className={classes.section}>
-        <h2>Followers</h2>
-        <p> {data.followers}</p>
+        <Fade left>
+          <h2>Followers</h2>
+          <p> {data.followers}</p>
+        </Fade>
       </div>
       <div className={classes.section}>
-        <h2>Recent Commits</h2>
-        <p> {recentCommits}</p>
+        <Fade left>
+          <h2>Recent Commits</h2>
+          <p> {recentCommits}</p>
+        </Fade>
       </div>
       <div className={classes.section}>
-        <h2>Recent Push/Pulls</h2>
-        <p> {recentActivities}</p>
+        <Fade left>
+          <h2>Recent Push/Pulls</h2>
+          <p> {recentActivities}</p>
+        </Fade>
       </div>
     </div>
   );

@@ -3,7 +3,6 @@ const styles = createStyles({
   container: {
     display: "flex",
     flexDirection: "column",
-    width: "100vw",
     alignSelf: "center",
     justifyContent: "center",
   },

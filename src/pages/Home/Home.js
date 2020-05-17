@@ -5,6 +5,8 @@ import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
 import Testimonials from "../../components/Testimonials";
 import GitStats from "../../components/GitStats";
+
+import Fade from "react-reveal/Fade";
 const Home = ({ classes, data, events }) => {
   const [device, setDevice] = useState(
     window.innerWidth >= 600 ? "desktop" : "mobile"
@@ -22,8 +24,12 @@ const Home = ({ classes, data, events }) => {
   ) : (
     <div className={classes.container}>
       <div className={classes.introduction}>
-        <img src={profile} alt="Ivan Dai" className={classes.profile} />
-        <Introduction />
+        <Fade top>
+          <img src={profile} alt="Ivan Dai" className={classes.profile} />
+        </Fade>
+        <Fade right>
+          <Introduction />
+        </Fade>
       </div>
       <GitStats data={data} events={events} />
       <h1 className={classes.sliderTitle}>Heres what people had to say</h1>
