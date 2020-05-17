@@ -3,7 +3,7 @@ import Github from "react-ionicons/lib/LogoGithub";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
 import Fade from "react-reveal/Fade";
-const GitStats = ({ classes, data, events }) => {
+const GitStats = ({ classes, data, events, navigation }) => {
   let recentCommits = 0;
   let recentActivities = events.length;
   const newEvents = events.filter((event) => event.type.match("PushEvent"));
@@ -16,30 +16,30 @@ const GitStats = ({ classes, data, events }) => {
         href="https://github.com/Ivandaixiv"
         className={classes.githubContainer}
       >
-        <Fade left>
+        <Fade top duration={2000}>
           <Github color="white" className={classes.github} />
         </Fade>
       </a>
       <div className={classes.section}>
-        <Fade left>
+        <Fade top duration={2000}>
           <h2>Public Projects</h2>
           <p> {data.public_repos}</p>
         </Fade>
       </div>
       <div className={classes.section}>
-        <Fade left>
+        <Fade top duration={2000}>
           <h2>Followers</h2>
           <p> {data.followers}</p>
         </Fade>
       </div>
       <div className={classes.section}>
-        <Fade left>
+        <Fade top duration={2000}>
           <h2>Recent Commits</h2>
           <p> {recentCommits}</p>
         </Fade>
       </div>
       <div className={classes.section}>
-        <Fade left>
+        <Fade top duration={2000}>
           <h2>Recent Push/Pulls</h2>
           <p> {recentActivities}</p>
         </Fade>

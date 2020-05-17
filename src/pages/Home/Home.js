@@ -5,7 +5,7 @@ import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
 import Testimonials from "../../components/Testimonials";
 import GitStats from "../../components/GitStats";
-
+import ScienceWorld from "../../assets/scienceworld.jpg";
 import Fade from "react-reveal/Fade";
 const Home = ({ classes, data, events }) => {
   const [device, setDevice] = useState(
@@ -17,19 +17,37 @@ const Home = ({ classes, data, events }) => {
   });
   return device === "mobile" ? (
     <div className={classes.container}>
-      <img src={profile} alt="Ivan Dai" className={classes.profile} />
-      <Introduction />
-      <h1>Heres what people had to say</h1>
+      <div
+        className={classes.hero}
+        style={{ backgroundImage: `url(${ScienceWorld})` }}
+      >
+        <div className={classes.introduction}>
+          <Fade top>
+            <Introduction />
+          </Fade>
+          <Fade right>
+            <img src={profile} alt="Ivan Dai" className={classes.profile} />
+          </Fade>
+        </div>
+      </div>
+      <GitStats data={data} events={events} />
+      <h1 className={classes.sliderTitle}>Heres what people had to say</h1>
+      <Testimonials />
     </div>
   ) : (
     <div className={classes.container}>
-      <div className={classes.introduction}>
-        <Fade top>
-          <img src={profile} alt="Ivan Dai" className={classes.profile} />
-        </Fade>
-        <Fade right>
-          <Introduction />
-        </Fade>
+      <div
+        className={classes.hero}
+        style={{ backgroundImage: `url(${ScienceWorld})` }}
+      >
+        <div className={classes.introduction}>
+          <Fade top>
+            <Introduction />
+          </Fade>
+          <Fade right>
+            <img src={profile} alt="Ivan Dai" className={classes.profile} />
+          </Fade>
+        </div>
       </div>
       <GitStats data={data} events={events} />
       <h1 className={classes.sliderTitle}>Heres what people had to say</h1>
