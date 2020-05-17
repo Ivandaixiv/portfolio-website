@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9ef6bcad0a6f115d263a940327fadb0f",
+    "revision": "82584a38d0b1af730c946535621214d9",
     "url": "/portfolio-website/index.html"
   },
   {
-    "revision": "bf9e3baf49b343ece551",
+    "revision": "c9d0142c11c86b8a2772",
     "url": "/portfolio-website/static/css/2.6b00acf2.chunk.css"
   },
   {
-    "revision": "3818d2bd0ea40090b9e8",
+    "revision": "008c5bdb3cc20c9d6518",
     "url": "/portfolio-website/static/css/main.f7391194.chunk.css"
   },
   {
-    "revision": "bf9e3baf49b343ece551",
-    "url": "/portfolio-website/static/js/2.47e9c5a8.chunk.js"
+    "revision": "c9d0142c11c86b8a2772",
+    "url": "/portfolio-website/static/js/2.bdfc90c6.chunk.js"
   },
   {
     "revision": "014134a9731baf3d441550fd473bcf6b",
-    "url": "/portfolio-website/static/js/2.47e9c5a8.chunk.js.LICENSE.txt"
+    "url": "/portfolio-website/static/js/2.bdfc90c6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3818d2bd0ea40090b9e8",
-    "url": "/portfolio-website/static/js/main.cb620f80.chunk.js"
+    "revision": "008c5bdb3cc20c9d6518",
+    "url": "/portfolio-website/static/js/main.1ed3f99f.chunk.js"
   },
   {
     "revision": "2517a8b4628c70fa0925",
@@ -38,5 +38,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0fb9920495081c9a4292ae54f8da2d32",
     "url": "/portfolio-website/static/media/ringo.0fb99204.jpg"
+  },
+  {
+    "revision": "7febf2b455082290a129707d9127556d",
+    "url": "/portfolio-website/static/media/scienceworld.7febf2b4.jpg"
   }
 ]);

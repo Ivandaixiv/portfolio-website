@@ -1,28 +1,29 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.f7391194.chunk.css",
-    "main.js": "/portfolio-website/static/js/main.cb620f80.chunk.js",
-    "main.js.map": "/portfolio-website/static/js/main.cb620f80.chunk.js.map",
+    "main.js": "/portfolio-website/static/js/main.1ed3f99f.chunk.js",
+    "main.js.map": "/portfolio-website/static/js/main.1ed3f99f.chunk.js.map",
     "runtime-main.js": "/portfolio-website/static/js/runtime-main.6a698c4e.js",
     "runtime-main.js.map": "/portfolio-website/static/js/runtime-main.6a698c4e.js.map",
     "static/css/2.6b00acf2.chunk.css": "/portfolio-website/static/css/2.6b00acf2.chunk.css",
-    "static/js/2.47e9c5a8.chunk.js": "/portfolio-website/static/js/2.47e9c5a8.chunk.js",
-    "static/js/2.47e9c5a8.chunk.js.map": "/portfolio-website/static/js/2.47e9c5a8.chunk.js.map",
+    "static/js/2.bdfc90c6.chunk.js": "/portfolio-website/static/js/2.bdfc90c6.chunk.js",
+    "static/js/2.bdfc90c6.chunk.js.map": "/portfolio-website/static/js/2.bdfc90c6.chunk.js.map",
     "index.html": "/portfolio-website/index.html",
-    "precache-manifest.69c945b06da75a1b3121636b0c48444d.js": "/portfolio-website/precache-manifest.69c945b06da75a1b3121636b0c48444d.js",
+    "precache-manifest.60af3142490641b578219b00e07f6ff1.js": "/portfolio-website/precache-manifest.60af3142490641b578219b00e07f6ff1.js",
     "service-worker.js": "/portfolio-website/service-worker.js",
     "static/css/2.6b00acf2.chunk.css.map": "/portfolio-website/static/css/2.6b00acf2.chunk.css.map",
     "static/css/main.f7391194.chunk.css.map": "/portfolio-website/static/css/main.f7391194.chunk.css.map",
-    "static/js/2.47e9c5a8.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.47e9c5a8.chunk.js.LICENSE.txt",
+    "static/js/2.bdfc90c6.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.bdfc90c6.chunk.js.LICENSE.txt",
     "static/media/ivandai.jpg": "/portfolio-website/static/media/ivandai.6270efed.jpg",
     "static/media/lance.jpg": "/portfolio-website/static/media/lance.08d895b1.jpg",
-    "static/media/ringo.jpg": "/portfolio-website/static/media/ringo.0fb99204.jpg"
+    "static/media/ringo.jpg": "/portfolio-website/static/media/ringo.0fb99204.jpg",
+    "static/media/scienceworld.jpg": "/portfolio-website/static/media/scienceworld.7febf2b4.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.6a698c4e.js",
     "static/css/2.6b00acf2.chunk.css",
-    "static/js/2.47e9c5a8.chunk.js",
+    "static/js/2.bdfc90c6.chunk.js",
     "static/css/main.f7391194.chunk.css",
-    "static/js/main.cb620f80.chunk.js"
+    "static/js/main.1ed3f99f.chunk.js"
   ]
 }
