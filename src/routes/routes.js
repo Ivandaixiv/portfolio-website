@@ -8,6 +8,7 @@ const Routes = () => {
   return (
     <Switch>
       <Route exact path="/home" component={Home} />
+      <Route exact path="/portfolio-website" component={Home} />
       <Route exact path="/projects" component={About} />
       <Route exact path="/contact" component={Contact} />
       <Redirect from="*" to="/home" />

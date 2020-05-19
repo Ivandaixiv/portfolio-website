@@ -1,5 +1,9 @@
 import { createStyles } from "@material-ui/styles";
 const styles = createStyles({
+  slideContainer: {
+    margin: "0 auto",
+    maxWidth: "30vw",
+  },
   testimonialImage: {
     maxWidth: 75,
     borderRadius: "50%",
@@ -13,7 +17,7 @@ const styles = createStyles({
     textAlign: "center",
   },
   slideText: {
-    width: "25%",
+    width: "80%",
     margin: "0 auto",
   },
 });
