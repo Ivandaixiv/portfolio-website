@@ -3,7 +3,7 @@ import Github from "react-ionicons/lib/LogoGithub";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
 import Fade from "react-reveal/Fade";
-const GitStats = ({ classes, data, events, navigation }) => {
+const GitStats = ({ classes, data, events }) => {
   let recentCommits = 0;
   let recentActivities = events.length;
   const newEvents = events.filter((event) => event.type.match("PushEvent"));
