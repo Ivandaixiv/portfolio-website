@@ -6,7 +6,7 @@ const styles = createStyles({
     justifyContent: "space-between",
   },
   iconContainer: {
-    position: "absolute",
+    position: "fixed",
     background: "#24305E",
     top: 10,
     right: 10,
@@ -34,7 +34,7 @@ const styles = createStyles({
     width: "auto",
   },
   compassContainer: {
-    position: "absolute",
+    position: "fixed",
     top: 10,
     left: 10,
     background: "#24305E",
