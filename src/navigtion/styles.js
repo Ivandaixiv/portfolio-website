@@ -5,6 +5,13 @@ const styles = createStyles({
     display: "flex",
     justifyContent: "space-between",
   },
+  navigation: {
+    zIndex: 2,
+    background: "#24305E",
+    height: 75,
+    position: "fixed",
+    width: "100vw",
+  },
   iconContainer: {
     position: "fixed",
     background: "#24305E",
