@@ -9,22 +9,32 @@ class HomeContainer extends Component {
     };
   }
 
-  componentDidMount() {
-    fetch("https://api.github.com/users/Ivandaixiv")
-      .then((results) => {
-        return results.json();
-      })
-      .then((data) => {
-        this.setState({ stats: data });
-      });
+  async componentDidMount() {
+    localStorage.getItem("stats") === null
+      ? fetch("https://api.github.com/users/Ivandaixiv")
+          .then((results) => {
+            return results.json();
+          })
+          .then((data) => {
+            localStorage.setItem("stats", JSON.stringify(data));
+            this.setState({ stats: data });
+          })
+      : await this.setState({
+          stats: JSON.parse(localStorage.getItem("stats")),
+        });
 
-    fetch("https://api.github.com/users/Ivandaixiv/events/public")
-      .then((results) => {
-        return results.json();
-      })
-      .then((data) => {
-        this.setState({ events: data });
-      });
+    localStorage.getItem("events") === null
+      ? fetch("https://api.github.com/users/Ivandaixiv/events/public")
+          .then((results) => {
+            return results.json();
+          })
+          .then((data) => {
+            localStorage.setItem("events", JSON.stringify(data));
+            this.setState({ events: data });
+          })
+      : await this.setState({
+          events: JSON.parse(localStorage.getItem("events")),
+        });
   }
   render() {
     return (
