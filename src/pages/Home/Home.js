@@ -50,8 +50,10 @@ const Home = ({ classes, data, events }) => {
         </div>
       </div>
       <GitStats data={data} events={events} />
-      <h1 className={classes.sliderTitle}>Heres what people had to say</h1>
-      <Testimonials />
+      <Fade left>
+        <h1 className={classes.sliderTitle}>Heres what people had to say</h1>
+        <Testimonials />
+      </Fade>
     </div>
   );
 };
