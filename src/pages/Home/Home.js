@@ -4,6 +4,7 @@ import Introduction from "../../components/Introduction";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
 import Testimonials from "../../components/Testimonials";
+import History from "../../components/History";
 import GitStats from "../../components/GitStats";
 import ScienceWorld from "../../assets/scienceworld.jpg";
 import Fade from "react-reveal/Fade";
@@ -49,6 +50,7 @@ const Home = ({ classes, data, events }) => {
           </Fade>
         </div>
       </div>
+      <History />
       <GitStats data={data} events={events} />
       <Fade left>
         <h1 className={classes.sliderTitle}>Heres what people had to say</h1>

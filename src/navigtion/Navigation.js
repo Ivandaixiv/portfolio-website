@@ -26,12 +26,8 @@ const Navigation = (props) => {
   const checkPosition = () => {
     if (window.pageYOffset > sticky) {
       setScroll(true);
-      console.log("scrolled", scroll);
-      console.log("Sticky", sticky, "page:", window.pageYOffset);
     } else {
       setScroll(false);
-      console.log("Sticky", sticky, "page:", window.pageYOffset);
-      console.log("scrolled", scroll);
     }
   };
   const [state, setState] = React.useState({
