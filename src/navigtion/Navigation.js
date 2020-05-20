@@ -24,7 +24,7 @@ const Navigation = (props) => {
     checkPosition();
   });
   const checkPosition = () => {
-    if (window.pageYOffset > sticky) {
+    if (window.pageYOffset > sticky + 200) {
       setScroll(true);
     } else {
       setScroll(false);

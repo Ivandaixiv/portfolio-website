@@ -1,29 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
+import RED from "../../assets/RED.jpg";
+import Fade from "react-reveal/Fade";
+
 const History = ({ classes }) => {
+  const [hover, setHover] = useState(false);
   return (
     <div className={classes.container}>
-      <h2>How I got here</h2>
-      <p>
-        It was during high school when programming was first introduced to me.
-        Ever since then I have not stopped pursuing programming both as hobby
-        and as a career by teaching myself programming with the help of
-        Treehouse, Youtube and reading documentation. My background has always
-        been in the technologies area. I started with volunteering at Free Geek
-        during my high school days and eventually I joined Profusion
-        Technologies and picked up many meaningful skills in hardware and
-        networking, which I am very grateful to have been given the opportunity
-        to learn from. However, my eyes always drew back to the software side of
-        things, leading me to RED Academy. RED is where I finally had a deeper
-        dive into development. RED taught me not just programming, it also
-        taught me to make meaningful connections and most importantly learning
-        how to learn. It is during my time at RED that I began participating
-        more in the Vancouver developer communities, such as React Vancouver and
-        Nodeschool. Its safe to say after all this my home belongs in the
-        British Columbia's Tech Sector. Feel free to reach out to me for any
-        more information or upcoming opportunities!
-      </p>
+      <Fade left>
+        <div className={classes.textContainer}>
+          <h2>How I got here</h2>
+          <p className={classes.text}>
+            It was during high school when programming was first introduced to
+            me. My background has always been in the technologies area. I
+            started with volunteering at Free Geek during my high school days
+            and eventually I joined Profusion Technologies and picked up many
+            meaningful skills in hardware and networking, which I am very
+            grateful to have been given the opportunity to learn from. However,
+            my eyes always drew back to the software side of things, leading me
+            to RED Academy. RED taught me not just programming, but it also
+            taught me to make meaningful connections and most importantly
+            learning how to learn on your own. It is during my time at RED that
+            I began participating more in the Vancouver developer communities,
+            such as React Vancouver and Nodeschool. Its safe to say after all
+            this my home belongs in the British Columbia's Tech Sector.
+          </p>
+        </div>
+      </Fade>
+      <Fade right>
+        <div className={classes.photoContainer}>
+          <img
+            src={RED}
+            alt="Group shot by Ariel Kew-Ladret"
+            className={classes.photo}
+          />
+          <div className={classes.hoverTextContainer}>
+            <h2 className={classes.hoverText}>
+              Group photo by Ariel Kew-Ladret
+            </h2>
+          </div>
+        </div>
+      </Fade>
     </div>
   );
 };
