@@ -29,15 +29,27 @@ const History = ({ classes }) => {
         </div>
       </Fade>
       <Fade right>
-        <div className={classes.photoContainer}>
+        <div
+          className={classes.photoContainer}
+          onMouseOver={() => {
+            setHover(true);
+          }}
+          onMouseOut={() => {
+            setHover(false);
+          }}
+        >
           <img
             src={RED}
             alt="Group shot by Ariel Kew-Ladret"
             className={classes.photo}
           />
-          <div className={classes.hoverTextContainer}>
+          <div
+            className={`${classes.hoverTextContainer} ${
+              hover && classes.hovered
+            }`}
+          >
             <h2 className={classes.hoverText}>
-              Group photo by Ariel Kew-Ladret
+              Group photo at RED by Ariel Kew-Ladret
             </h2>
           </div>
         </div>
