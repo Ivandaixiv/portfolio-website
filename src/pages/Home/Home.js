@@ -8,6 +8,7 @@ import History from "../../components/History";
 import GitStats from "../../components/GitStats";
 import ScienceWorld from "../../assets/scienceworld.jpg";
 import Fade from "react-reveal/Fade";
+import Skills from "../../components/Skills";
 const Home = ({ classes, data, events }) => {
   const [device, setDevice] = useState(
     window.innerWidth >= 600 ? "desktop" : "mobile"
@@ -54,6 +55,7 @@ const Home = ({ classes, data, events }) => {
         </div>
       </div>
       <History />
+      <Skills />
       <GitStats data={data} events={events} />
       <Fade left>
         <h1 className={classes.sliderTitle}>Heres what people had to say</h1>
