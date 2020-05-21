@@ -4,9 +4,11 @@ import Introduction from "../../components/Introduction";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
 import Testimonials from "../../components/Testimonials";
+import History from "../../components/History";
 import GitStats from "../../components/GitStats";
 import ScienceWorld from "../../assets/scienceworld.jpg";
 import Fade from "react-reveal/Fade";
+import Skills from "../../components/Skills";
 const Home = ({ classes, data, events }) => {
   const [device, setDevice] = useState(
     window.innerWidth >= 600 ? "desktop" : "mobile"
@@ -30,9 +32,12 @@ const Home = ({ classes, data, events }) => {
           </Fade>
         </div>
       </div>
+      <History />
       <GitStats data={data} events={events} />
-      <h1 className={classes.sliderTitle}>Heres what people had to say</h1>
-      <Testimonials />
+      <Fade left>
+        <h1 className={classes.sliderTitle}>Heres what people had to say</h1>
+        <Testimonials />
+      </Fade>
     </div>
   ) : (
     <div className={classes.container}>
@@ -49,6 +54,8 @@ const Home = ({ classes, data, events }) => {
           </Fade>
         </div>
       </div>
+      <History />
+      <Skills />
       <GitStats data={data} events={events} />
       <Fade left>
         <h1 className={classes.sliderTitle}>Heres what people had to say</h1>
