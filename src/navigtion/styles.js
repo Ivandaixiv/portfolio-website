@@ -5,11 +5,19 @@ const styles = createStyles({
     display: "flex",
     justifyContent: "space-between",
   },
+  navigation: {
+    zIndex: 2,
+    background: "#24305E",
+    height: 75,
+    position: "fixed",
+    width: "100vw",
+  },
   iconContainer: {
-    position: "absolute",
+    position: "fixed",
     background: "#24305E",
     top: 10,
     right: 10,
+    boxShadow: "2px 2px 10px #24305E",
   },
   icon: {
     padding: 10,
@@ -33,10 +41,11 @@ const styles = createStyles({
     width: "auto",
   },
   compassContainer: {
-    position: "absolute",
+    position: "fixed",
     top: 10,
     left: 10,
     background: "#24305E",
+    boxShadow: "2px 2px 10px #24305E",
   },
   compass: {
     padding: 10,

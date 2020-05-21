@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import MdCompass from "react-ionicons/lib/MdCompass";
 import MdFolder from "react-ionicons/lib/MdFolder";
-import MdPerson from "react-ionicons/lib/MdPerson";
 import IosHome from "react-ionicons/lib/IosHome";
 import IosMail from "react-ionicons/lib/IosMail";
 import MdChatbubbles from "react-ionicons/lib/MdChatbubbles";
@@ -15,11 +14,24 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { Link } from "react-router-dom";
-
+import Fade from "react-reveal/Fade";
 const Navigation = (props) => {
   const { classes } = props;
+  const [scroll, setScroll] = useState(false);
+  const navbar = document.getElementById("navbar");
+  let sticky = navbar != null && navbar.offsetTop;
+  window.addEventListener("scroll", () => {
+    checkPosition();
+  });
+  const checkPosition = () => {
+    if (window.pageYOffset > sticky + 200) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
   const [state, setState] = React.useState({
-    left: false,
+    top: false,
   });
   const [Shake, setShake] = useState(true);
 
@@ -53,18 +65,10 @@ const Navigation = (props) => {
           </Link>
         </ListItem>
         <ListItem>
-          <Link to="/about">
+          <Link to="/projects">
             <Button className={classes.button}>
               <MdFolder className={classes.icon} color="white" />
-              <ListItemText className={classes.link} primary="About" />
-            </Button>
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link to="/testimonials">
-            <Button className={classes.button}>
-              <MdPerson className={classes.icon} color="white" />
-              <ListItemText className={classes.link} primary="Testimonials" />
+              <ListItemText className={classes.link} primary="Projects" />
             </Button>
           </Link>
         </ListItem>
@@ -81,19 +85,23 @@ const Navigation = (props) => {
   );
 
   return (
-    <div>
-      <>
+    <Fade top duration={250} spy={window.pageYOffset}>
+      <div id="navbar" className={scroll && classes.navigation}>
         <div className={classes.compassContainer}>
-          <Button size="small" onClick={toggleDrawer("left", true)}>
-            <MdCompass className={classes.compass} color="white" />
+          <Button size="small" onClick={toggleDrawer("top", true)}>
+            <MdCompass
+              className={classes.compass}
+              color="white"
+              rotate={true}
+            />
           </Button>
         </div>
         <Drawer
-          anchor={"left"}
-          open={state["left"]}
-          onClose={toggleDrawer("left", false)}
+          anchor={"top"}
+          open={state["top"]}
+          onClose={toggleDrawer("top", false)}
         >
-          {list("left")}
+          {list("top")}
         </Drawer>
         <div className={classes.iconContainer}>
           <Button size="small">
@@ -108,8 +116,8 @@ const Navigation = (props) => {
             />
           </Button>
         </div>
-      </>
-    </div>
+      </div>
+    </Fade>
   );
 };
 
