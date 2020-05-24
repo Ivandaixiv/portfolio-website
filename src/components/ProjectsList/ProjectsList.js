@@ -1,7 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
-const ProjectsList = ({ classes, setSelectedProject }) => {
+const ProjectsList = ({ classes, setSelectedProject, data }) => {
   return (
     <ul>
       <li>Yes</li>
@@ -13,6 +13,9 @@ const ProjectsList = ({ classes, setSelectedProject }) => {
           });
         }}
       />
+      {data.map((project, index) => {
+        console.log("project:", project);
+      })}
     </ul>
   );
 };
