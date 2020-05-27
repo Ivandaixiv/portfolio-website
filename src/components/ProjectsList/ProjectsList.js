@@ -4,7 +4,18 @@ import styles from "./styles";
 import { List, ListItem, Link } from "@material-ui/core";
 import Phone from "react-ionicons/lib/IosPhonePortrait";
 import Laptop from "react-ionicons/lib/IosLaptop";
+import Unknown from "react-ionicons/lib/IosPhotos";
+import Github from "react-ionicons/lib/LogoGithub";
 const ProjectsList = ({ classes, setSelectedProject, data }) => {
+  const handleCard = (project) => {
+    if (project.type === "App") {
+      return <Phone />;
+    } else if (project.type === "Website") {
+      return <Laptop />;
+    } else {
+      return <Unknown />;
+    }
+  };
   return (
     <>
       <h2>Featured Projects</h2>
@@ -12,14 +23,21 @@ const ProjectsList = ({ classes, setSelectedProject, data }) => {
         {data.map((project, index) => {
           return (
             <ListItem key={index}>
-              <Link
-                onClick={() => {
-                  setSelectedProject(project);
-                }}
-              >
-                {project.type === "app" ? <Phone /> : <Laptop />}
-                <h2>{project.name}</h2>
-              </Link>
+              {project.type === "Link" ? (
+                <a href={project.github}>
+                  <p>Check out the rest of my projects</p>
+                  <Github />
+                </a>
+              ) : (
+                <Link
+                  onClick={() => {
+                    setSelectedProject(project);
+                  }}
+                >
+                  {handleCard(project)}
+                  <h2>{project.name}</h2>
+                </Link>
+              )}
             </ListItem>
           );
         })}

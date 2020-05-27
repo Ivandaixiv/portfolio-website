@@ -15,9 +15,9 @@ const Projects = ({ classes }) => {
       name: "Voicestory 2020",
       media: Voicestory,
       description:
-        "The VoiceStory App allows the user to find speakers, videos and events, past or present, at Voicestory in one mobile React Native application. The user is able to favourite the select video and will be able to read up on the speaker.",
+        "The VoiceStory App allows the user to find speakers, videos and events, past or present, at Voicestory in one mobile React Native Application. The user is able to favourite the select video and will be able to read up on the speaker.",
       github: "https://github.com/redacademy/voicestory-winter-2020",
-      type: "app",
+      type: "App",
     },
     {
       name: "Boomtown",
@@ -25,7 +25,7 @@ const Projects = ({ classes }) => {
       description:
         "Boomtown enables a user to borrow items and share items to the boomtown community. All the user has to do is create an account and everything else is already setup. The project uses React.js,Node.js, GraphQL, etc... in the background to manage the database and render content to the screen for the user.",
       github: "https://github.com/Ivandaixiv/boomtown-application",
-      type: "website",
+      type: "Website",
     },
     {
       name: "R10",
@@ -33,7 +33,7 @@ const Projects = ({ classes }) => {
       description:
         "The R10 Conference App allows the user to find everything about the conference in one mobile React Native application. The user is able to favourite the select session their interest it and will be able to read up more on the speaker and their content.",
       github: "https://github.com/Ivandaixiv/react-native-r10",
-      type: "app",
+      type: "App",
     },
     {
       name: "Inhabitent",
@@ -47,9 +47,14 @@ const Projects = ({ classes }) => {
       name: "CodeRoad",
       media: Coderoad,
       description:
-        "The CodeRoad WordPress Site uses a custom theme that is based off of the RED Starter Theme. It's main concept is a video/education site for the coderoad application.",
+        "The CodeRoad WordPress Site uses a custom theme that is based off of the RED Starter Theme. It's main concept is a video/education site for the coderoad Application.",
       github: "https://github.com/Ivandaixiv/coderoad-fall-2019",
       type: "Website",
+    },
+    {
+      name: "Github",
+      github: "https://github.com/Ivandaixiv/",
+      type: "Link",
     },
   ];
   const [selectedProject, setSelectedProject] = useState(data[0]);
