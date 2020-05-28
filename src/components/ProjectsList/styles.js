@@ -6,7 +6,10 @@ const styles = createStyles({
   },
   projectsContainer: {
     display: "flex",
+    justifyContent: "center",
+    alignContent: "center",
     flexDirection: "column",
+    height: "80%",
   },
   projectCardContainer: {
     display: "flex",
