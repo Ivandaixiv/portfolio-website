@@ -3,6 +3,11 @@ const styles = createStyles({
   projects: {
     display: "flex",
   },
+  projectsContainer: {
+    display: "flex",
+    width: "100vw",
+    flexDirection: "column",
+  },
   projectCardContainer: {
     display: "flex",
     flexDirection: "column",
@@ -19,6 +24,12 @@ const styles = createStyles({
     border: "2px solid black",
     width: 200,
     height: 200,
+  },
+  icon: {
+    transform: "scale(1.5)",
+  },
+  title: {
+    alignSelf: "center",
   },
 });
 export default styles;
