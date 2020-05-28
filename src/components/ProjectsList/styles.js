@@ -1,11 +1,11 @@
 import { createStyles } from "@material-ui/styles";
 const styles = createStyles({
   projects: {
-    display: "flex",
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
   },
   projectsContainer: {
     display: "flex",
-    width: "100vw",
     flexDirection: "column",
   },
   projectCardContainer: {
@@ -13,7 +13,6 @@ const styles = createStyles({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    maxWidth: "100vw",
     overflow: "hidden",
   },
   projectCard: {
