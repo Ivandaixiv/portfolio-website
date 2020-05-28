@@ -22,10 +22,10 @@ const ProjectsList = ({ classes, setSelectedProject, data }) => {
       <List className={classes.projects}>
         {data.map((project, index) => {
           return (
-            <ListItem key={index}>
+            <ListItem key={index} className={classes.projectCardContainer}>
               {project.type === "Link" ? (
-                <a href={project.github}>
-                  <p>Check out the rest of my projects</p>
+                <a href={project.github} className={classes.projectCard}>
+                  <h2>More Projects!</h2>
                   <Github />
                 </a>
               ) : (
@@ -33,9 +33,10 @@ const ProjectsList = ({ classes, setSelectedProject, data }) => {
                   onClick={() => {
                     setSelectedProject(project);
                   }}
+                  className={classes.projectCard}
                 >
-                  {handleCard(project)}
                   <h2>{project.name}</h2>
+                  {handleCard(project)}
                 </Link>
               )}
             </ListItem>
