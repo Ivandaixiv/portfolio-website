@@ -30,8 +30,8 @@ const ProjectsList = ({ classes, setSelectedProject, data }) => {
                 </a>
               ) : (
                 <Link
-                  onClick={() => {
-                    setSelectedProject(project);
+                  onClick={async () => {
+                    await setSelectedProject(project);
                   }}
                   className={classes.projectCard}
                 >

@@ -62,18 +62,29 @@ const Projects = ({ classes }) => {
   return (
     <div className={classes.projects}>
       <Fade left>
-        <div className={classes.featured}>
-          <h2>Selected</h2>
-          <p>{selectedProject.name}</p>
-          <p>{selectedProject.description}</p>
-          <img
-            src={selectedProject.media}
-            alt={selectedProject.name}
-            style={{ borderRadius: 40 }}
-          />
-          <a href={selectedProject.github}>
-            <Button>Check it out!</Button>
-          </a>
+        <div
+          className={
+            selectedProject.type === "App"
+              ? classes.featuredApp
+              : classes.featuredWebsite
+          }
+        >
+          <Fade left spy={selectedProject}>
+            <img
+              className={
+                selectedProject.type === "App" ? classes.app : classes.website
+              }
+              src={selectedProject.media}
+              alt={selectedProject.name}
+            />
+          </Fade>
+          <div className={classes.projectText}>
+            <h2>Selected: {selectedProject.name} </h2>
+            <p>{selectedProject.description}</p>
+            <a href={selectedProject.github}>
+              <Button>Check it out!</Button>
+            </a>
+          </div>
         </div>
       </Fade>
       <Fade right>

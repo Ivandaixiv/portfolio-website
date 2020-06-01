@@ -9,7 +9,7 @@ const styles = createStyles({
     justifyContent: "center",
     alignContent: "center",
     flexDirection: "column",
-    height: "80%",
+    height: "75vh",
   },
   projectCardContainer: {
     display: "flex",
