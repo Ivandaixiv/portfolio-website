@@ -42,5 +42,12 @@ const styles = createStyles({
     margin: 30,
     height: "80%",
   },
+  button: {
+    color: "white",
+    background: "#14A76C",
+    "&:hover": {
+      background: "#f44339",
+    },
+  },
 });
 export default styles;

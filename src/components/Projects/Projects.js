@@ -81,7 +81,7 @@ const Projects = ({ classes }) => {
               <h2>Selected: {selectedProject.name} </h2>
               <p>{selectedProject.description}</p>
               <a href={selectedProject.github}>
-                <Button>Check it out!</Button>
+                <Button className={classes.button}>Check it out!</Button>
               </a>
             </div>
           </Fade>
