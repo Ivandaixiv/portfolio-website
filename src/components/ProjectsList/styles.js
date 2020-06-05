@@ -20,12 +20,19 @@ const styles = createStyles({
   },
   projectCard: {
     display: "flex",
+    color: "white",
+    background: "#14A76C",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     border: "2px solid black",
     width: 200,
     height: 200,
+    transition: "1s",
+    "&:hover": {
+      textDecoration: "none",
+      background: "#f44339",
+    },
   },
   icon: {
     transform: "scale(1.5)",

@@ -77,14 +77,14 @@ const Projects = ({ classes }) => {
               src={selectedProject.media}
               alt={selectedProject.name}
             />
+            <div className={classes.projectText}>
+              <h2>Selected: {selectedProject.name} </h2>
+              <p>{selectedProject.description}</p>
+              <a href={selectedProject.github}>
+                <Button>Check it out!</Button>
+              </a>
+            </div>
           </Fade>
-          <div className={classes.projectText}>
-            <h2>Selected: {selectedProject.name} </h2>
-            <p>{selectedProject.description}</p>
-            <a href={selectedProject.github}>
-              <Button>Check it out!</Button>
-            </a>
-          </div>
         </div>
       </Fade>
       <Fade right>
