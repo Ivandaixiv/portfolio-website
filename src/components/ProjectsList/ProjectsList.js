@@ -9,16 +9,16 @@ import Github from "react-ionicons/lib/LogoGithub";
 const ProjectsList = ({ classes, setSelectedProject, data }) => {
   const handleCard = (project) => {
     if (project.type === "App") {
-      return <Phone />;
+      return <Phone className={classes.icon} color="white" />;
     } else if (project.type === "Website") {
-      return <Laptop />;
+      return <Laptop className={classes.icon} color="white" />;
     } else {
-      return <Unknown />;
+      return <Unknown className={classes.icon} color="white" />;
     }
   };
   return (
-    <>
-      <h2>Featured Projects</h2>
+    <div className={classes.projectsContainer}>
+      <h1 className={classes.title}>Featured Projects</h1>
       <List className={classes.projects}>
         {data.map((project, index) => {
           return (
@@ -26,12 +26,12 @@ const ProjectsList = ({ classes, setSelectedProject, data }) => {
               {project.type === "Link" ? (
                 <a href={project.github} className={classes.projectCard}>
                   <h2>More Projects!</h2>
-                  <Github />
+                  <Github className={classes.icon} color="white" />
                 </a>
               ) : (
                 <Link
-                  onClick={() => {
-                    setSelectedProject(project);
+                  onClick={async () => {
+                    await setSelectedProject(project);
                   }}
                   className={classes.projectCard}
                 >
@@ -43,7 +43,7 @@ const ProjectsList = ({ classes, setSelectedProject, data }) => {
           );
         })}
       </List>
-    </>
+    </div>
   );
 };
 

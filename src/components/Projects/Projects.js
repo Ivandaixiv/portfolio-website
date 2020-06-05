@@ -60,24 +60,41 @@ const Projects = ({ classes }) => {
   const [selectedProject, setSelectedProject] = useState(data[0]);
 
   return (
-    <Fade>
-      <div>
-        <h2>Selected</h2>
-        <p>{selectedProject.name}</p>
-        <p>{selectedProject.description}</p>
-        <img
-          src={selectedProject.media}
-          alt={selectedProject.name}
-          style={{ borderRadius: 40 }}
+    <div className={classes.projects}>
+      <Fade left>
+        <div
+          className={
+            selectedProject.type === "App"
+              ? classes.featuredApp
+              : classes.featuredWebsite
+          }
+        >
+          <Fade left spy={selectedProject}>
+            <img
+              className={
+                selectedProject.type === "App" ? classes.app : classes.website
+              }
+              src={selectedProject.media}
+              alt={selectedProject.name}
+            />
+            <div className={classes.projectText}>
+              <h2>Selected: {selectedProject.name} </h2>
+              <p>{selectedProject.description}</p>
+              <a href={selectedProject.github}>
+                <Button className={classes.button}>Check it out!</Button>
+              </a>
+            </div>
+          </Fade>
+        </div>
+      </Fade>
+      <Fade right>
+        <ProjectsList
+          setSelectedProject={setSelectedProject}
+          data={data}
+          className={classes.projectsList}
         />
-        <a href={selectedProject.github}>
-          <Button>Check it out!</Button>
-        </a>
-      </div>
-      <div>
-        <ProjectsList setSelectedProject={setSelectedProject} data={data} />
-      </div>
-    </Fade>
+      </Fade>
+    </div>
   );
 };
 
